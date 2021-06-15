@@ -123,7 +123,7 @@ public class PlayerSearch implements InputOutputFormatter {
         System.out.println("Country\t\t\t Players");
 
         for (String country : countryList) {
-            System.out.printf("%s\t\t\t ", country);
+            System.out.printf("%-20s ", country);
             int totalPlayerOfCountry = 0;
 
             //iterates over PlayerDB for each country in countryList
