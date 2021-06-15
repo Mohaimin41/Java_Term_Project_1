@@ -19,7 +19,7 @@ public class ClubSearch {
 
     //return a List of all players in the club
     public List<Player> clubPlayerList(String club) {
-        List<Player> CLubPlayerList = new ArrayList();
+        List<Player> CLubPlayerList = new ArrayList<>();
 
         for (Player player : PlayerDB) {
             if (player.getClub().equalsIgnoreCase(club)) {

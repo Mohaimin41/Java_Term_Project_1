@@ -120,7 +120,7 @@ public class PlayerSearch implements InputOutputFormatter {
 
     //Prints player count by country
     public void printPlayerByCountry(List<String> countryList) {
-        System.out.println("Country\t\t\t Players");
+        System.out.printf("%-20s%-20s\n", "Country", "Players");
 
         for (String country : countryList) {
             System.out.printf("%-20s ", country);
