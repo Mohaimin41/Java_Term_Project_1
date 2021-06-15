@@ -8,12 +8,11 @@ public class AddPlayer {
         this.PlayerDB = PlayerDB;
     }
 
-    //returns total players in a club
-    public int clubTotalPlayer (String club) {
+    public int clubTotalPlayer(String club) {
         int totalPlayerInClub = 0;
 
         for (Player player : PlayerDB) {
-            if(player.getClub().equalsIgnoreCase(club)) {
+            if (player.getClub().equalsIgnoreCase(club)) {
                 totalPlayerInClub++;
             }
         }
@@ -21,7 +20,7 @@ public class AddPlayer {
         return totalPlayerInClub;
     }
 
-    public boolean isNamePresent (Player playerToBeAdded) {
+    public boolean isNamePresent(Player playerToBeAdded) {
         for (Player player : PlayerDB) {
             if (player.getName().equalsIgnoreCase(playerToBeAdded.getName())) {
                 return true;
@@ -30,11 +29,11 @@ public class AddPlayer {
         return false;
     }
 
-    public boolean hasClubSpace (Player playerToBeAdded) {
+    public boolean hasClubSpace(Player playerToBeAdded) {
         return clubTotalPlayer(playerToBeAdded.getClub()) < 7;
     }
 
-    public void addPlayer (Player playerToBeAdded) {
+    public void addPlayer(Player playerToBeAdded) {
         PlayerDB.add(playerToBeAdded);
     }
 

@@ -1,4 +1,4 @@
-public class Player {
+public class Player implements InputOutputFormatter{
     String Name;
     String Country;
     int Age;
@@ -11,7 +11,7 @@ public class Player {
     public Player() {
     }
 
-    public Player( String Name, String Country, int Age, double Height, String Club, String Position, int Number, double WeeklySalary ) {
+    /*public Player(String Name, String Country, int Age, double Height, String Club, String Position, int Number, double WeeklySalary) {
         this.Name = Name;
         this.Country = Country;
         this.Age = Age;
@@ -20,11 +20,12 @@ public class Player {
         this.Position = Position;
         this.Number = Number;
         this.WeeklySalary = WeeklySalary;
-    }
+    }*/
 
     public void setName(String name) {
         Name = name;
     }
+
     public String getName() {
         return Name;
     }
@@ -41,7 +42,9 @@ public class Player {
         Age = age;
     }
 
-    public int getAge() { return Age; }
+    public int getAge() {
+        return Age;
+    }
 
     public void setHeight(double height) {
         Height = height;
@@ -71,7 +74,9 @@ public class Player {
         Number = number;
     }
 
-    public int getNumber() { return Number; }
+    public int getNumber() {
+        return Number;
+    }
 
     public void setWeeklySalary(double weeklySalary) {
         this.WeeklySalary = weeklySalary;
@@ -89,7 +94,7 @@ public class Player {
         System.out.println("Height: " + Height);
         System.out.println("Position: " + Position);
         System.out.println("Number: " + Number);
-        System.out.println("Weekly Salary: " + WeeklySalary );
-        System.out.println("================================================================================");
+        System.out.println("Weekly Salary: " + WeeklySalary);
+        horizontalLine();
     }
 }

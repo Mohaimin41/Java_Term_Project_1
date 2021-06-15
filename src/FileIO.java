@@ -10,7 +10,7 @@ public class FileIO {
     public static final String FILE_NAME = "players.txt";
 
     public FileIO() {
-        }
+    }
 
     public List<Player> readFromFile() throws Exception {
         //Player list to be used as database

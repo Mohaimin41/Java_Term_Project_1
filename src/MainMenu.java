@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class MainMenu {
+public class MainMenu implements InputOutputFormatter {
     public MainMenu() {
     }
 
@@ -13,30 +13,30 @@ public class MainMenu {
         System.out.println("(4) Exit System");
     }
 
-    public boolean MenuProcess (int MenuOption, List<Player> PlayerDB, FileIO PlayerFile) throws Exception {
+    public boolean MenuProcess(int MenuOption, List<Player> PlayerDB, FileIO PlayerFile) throws Exception {
         Scanner input = new Scanner(System.in);
 
-        if (MenuOption == 1 ) {
-            PlayerSearchMenu playerSearchMenu =  new PlayerSearchMenu();
+        if (MenuOption == 1) {
+            PlayerSearchMenu playerSearchMenu = new PlayerSearchMenu(PlayerDB);
 
             while (true) {
                 playerSearchMenu.writeMenu();
                 int PlayerSearchMenuOption = input.nextInt();
 
-                if(!playerSearchMenu.processMenu(PlayerSearchMenuOption, PlayerDB)) {
+                if (!playerSearchMenu.processMenu(PlayerSearchMenuOption)) {
                     break;
                 }
             }
             return true;
 
         } else if (MenuOption == 2) {
-            ClubSearchMenu clubSearchMenu = new ClubSearchMenu();
+            ClubSearchMenu clubSearchMenu = new ClubSearchMenu(PlayerDB);
 
             while (true) {
                 clubSearchMenu.writeMenu();
                 int clubSearchMenuOption = input.nextInt();
 
-                if(!clubSearchMenu.processMenu(clubSearchMenuOption, PlayerDB)) {
+                if (!clubSearchMenu.processMenu(clubSearchMenuOption)) {
                     break;
                 }
             }
@@ -51,13 +51,21 @@ public class MainMenu {
 
             if (addPlayer.isNamePresent(playerToBeAdded)) {
                 System.out.println("There is already a player present with this name");
+
             } else {
                 if (addPlayer.hasClubSpace(playerToBeAdded)) {
+
                     addPlayer.addPlayer(playerToBeAdded);
+
+                    System.out.println("The player " + playerToBeAdded.getName() + " has been added");
+
                 } else {
                     System.out.println("The club" + playerToBeAdded.getClub() + "already has 7 players, no more player can be added");
+
                 }
             }
+
+            horizontalLine();
 
             return true;
 
@@ -66,8 +74,8 @@ public class MainMenu {
             return false;
 
         } else {
-            System.out.println("Please choose a correct option:");
-            System.out.println("=========================================================================================");
+            chooseCorrectOption();
+            horizontalLine();
             return true;
         }
     }

@@ -19,7 +19,7 @@ public class Main {
             int MenuOption = input.nextInt();
 
             //Process the menu
-            if(!menu.MenuProcess(MenuOption, PlayerDB, playerFile)) {
+            if (!menu.MenuProcess(MenuOption, PlayerDB, playerFile)) {
                 break;
             }
         }

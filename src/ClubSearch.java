@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClubSearch{
+public class ClubSearch {
     List<Player> PlayerDB;
 
     public ClubSearch(List<Player> PlayerDB) {
         this.PlayerDB = PlayerDB;
     }
 
-    public boolean searchByName (String club) {
+    public boolean searchByName(String club) {
         for (Player player : PlayerDB) {
             if (player.getClub().equalsIgnoreCase(club)) {
                 return true;
@@ -18,7 +18,7 @@ public class ClubSearch{
     }
 
     //return a List of all players in the club
-    public List<Player> clubPlayerList (String club) {
+    public List<Player> clubPlayerList(String club) {
         List<Player> CLubPlayerList = new ArrayList();
 
         for (Player player : PlayerDB) {
@@ -30,7 +30,7 @@ public class ClubSearch{
         return CLubPlayerList;
     }
 
-    public double maxSalaryInCLub (String club) {
+    public double maxSalaryInCLub(String club) {
         double maxSalary = 0.0;
         List<Player> clubPlayerList = clubPlayerList(club);
 
@@ -43,7 +43,7 @@ public class ClubSearch{
         return maxSalary;
     }
 
-    public void printPlayerInClubBySalary (double weeklySalary, String club) {
+    public void printPlayerInClubBySalary(double weeklySalary, String club) {
         List<Player> clubPlayerList = clubPlayerList(club);
         int total = 0;
 
@@ -55,8 +55,8 @@ public class ClubSearch{
         }
     }
 
-    public double maxAgeInCLub (String club) {
-        double maxAge = 0.0;
+    public int maxAgeInCLub(String club) {
+        int maxAge = 0;
         List<Player> clubPlayerList = clubPlayerList(club);
 
         for (Player player : clubPlayerList) {
@@ -68,7 +68,7 @@ public class ClubSearch{
         return maxAge;
     }
 
-    public void printPlayerInClubByAge (double age, String club) {
+    public void printPlayerInClubByAge(double age, String club) {
         List<Player> clubPlayerList = clubPlayerList(club);
         int total = 0;
 
@@ -80,7 +80,7 @@ public class ClubSearch{
         }
     }
 
-    public double maxHeightInCLub (String club) {
+    public double maxHeightInCLub(String club) {
         double maxHeight = 0.0;
         List<Player> clubPlayerList = clubPlayerList(club);
 
@@ -93,7 +93,7 @@ public class ClubSearch{
         return maxHeight;
     }
 
-    public void printPlayerInClubByHeight (double Height, String club) {
+    public void printPlayerInClubByHeight(double Height, String club) {
         List<Player> clubPlayerList = clubPlayerList(club);
         int total = 0;
 
@@ -105,7 +105,7 @@ public class ClubSearch{
         }
     }
 
-    public double totalYearlySalaryClub (String club) {
+    public double totalYearlySalaryClub(String club) {
         double totalWeeklySalary = 0.0;
         List<Player> clubPlayerList = clubPlayerList(club);
 

@@ -1,9 +1,10 @@
 import java.util.Scanner;
 import java.util.List;
 
-public class PlayerSearchMenu {
+public class PlayerSearchMenu extends PlayerSearch {
 
-    public PlayerSearchMenu() {
+    public PlayerSearchMenu(List<Player> PlayerDB) {
+        super(PlayerDB);
     }
 
     public void writeMenu() {
@@ -16,17 +17,16 @@ public class PlayerSearchMenu {
         System.out.println("(6) Back to Main Menu");
     }
 
-    public boolean processMenu(int playerSearchOption, List<Player> PlayerDB) {
+    public boolean processMenu(int playerSearchOption) {
         Scanner input = new Scanner(System.in);
-        PlayerSearch playerSearch = new PlayerSearch(PlayerDB);
 
-        if(playerSearchOption == 1) {
+        if (playerSearchOption == 1) {
 
             System.out.println("Enter the name of the player to be searched: ");
             String searchString = input.nextLine();
 
-            if (playerSearch.searchByName(searchString)) {
-                playerSearch.returnSearchedPlayer(searchString).display();
+            if (searchByName(searchString)) {
+                returnSearchedPlayer(searchString).display();
             } else {
                 System.out.println("No such player with this name");
                 System.out.println("=========================================================================================");
@@ -34,28 +34,28 @@ public class PlayerSearchMenu {
 
             return true;
 
-        } else if(playerSearchOption == 2) {
+        } else if (playerSearchOption == 2) {
             System.out.println("Enter the country to be searched:");
             String country = input.nextLine();
             System.out.println("Enter the club to be searched");
             String club = input.nextLine();
 
-            if(club.equals("ANY")) {
-                playerSearch.searchByCountry(country);
+            if (club.equals("ANY")) {
+                searchByCountry(country);
             } else {
-                playerSearch.searchByClubCountry(country, club);
+                searchByClubCountry(country, club);
             }
 
             return true;
 
-        } else if(playerSearchOption == 3) {
+        } else if (playerSearchOption == 3) {
             System.out.println("Enter the position to be searched");
             String Position = input.nextLine();
-            playerSearch.searchByPosition(Position);
+            searchByPosition(Position);
 
             return true;
 
-        } else if(playerSearchOption == 4) {
+        } else if (playerSearchOption == 4) {
             System.out.println("Enter the weekly salary range to be searched:");
 
             System.out.println("Lower Bound:");
@@ -63,15 +63,15 @@ public class PlayerSearchMenu {
             System.out.println("Upper Bound");
             double high = input.nextDouble();
 
-            playerSearch.searchBySalaryRange(low, high);
+            searchBySalaryRange(low, high);
 
             return true;
 
-        } else if(playerSearchOption == 5) {
-            playerSearch.countryStat();
+        } else if (playerSearchOption == 5) {
+            countryStat();
             return true;
 
-        } else if(playerSearchOption == 6) {
+        } else if (playerSearchOption == 6) {
             return false;
 
         } else {

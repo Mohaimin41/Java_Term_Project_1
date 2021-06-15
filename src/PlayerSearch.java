@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class PlayerSearch {
+public class PlayerSearch implements InputOutputFormatter {
     List<Player> PlayerDB;
 
     public PlayerSearch(List<Player> PlayerDB) {
@@ -39,7 +39,7 @@ public class PlayerSearch {
         }
         if (total == 0) {
             System.out.println("No player found with the given country and club");
-            System.out.println("=========================================================================================");
+            horizontalLine();
         }
     }
 
@@ -54,7 +54,7 @@ public class PlayerSearch {
         }
         if (total == 0) {
             System.out.println("No player found with the given country and club");
-            System.out.println("=========================================================================================");
+            horizontalLine();
         }
     }
 
@@ -69,7 +69,7 @@ public class PlayerSearch {
         }
         if (total == 0) {
             System.out.println("No player found with the given position");
-            System.out.println("=========================================================================================");
+            horizontalLine();
         }
     }
 
@@ -84,7 +84,7 @@ public class PlayerSearch {
         }
         if (total == 0) {
             System.out.println("No player found with the given weekly salary range");
-            System.out.println("=========================================================================================");
+            horizontalLine();
         }
     }
 
@@ -101,15 +101,15 @@ public class PlayerSearch {
 
         printPlayerByCountry(countryList);
 
-        System.out.println("=========================================================================================");
+        horizontalLine();
     }
 
     //returns a List of unique countries in PlayerDB
-    public List<String> countryList( List<Player> PlayerDB) {
+    public List<String> countryList(List<Player> PlayerDB) {
         List<String> countries = new ArrayList();
 
         for (Player player : PlayerDB) {
-            if( !countries.contains(player.getCountry())) {
+            if (!countries.contains(player.getCountry())) {
                 countries.add(player.getCountry());
             }
         }
@@ -119,12 +119,13 @@ public class PlayerSearch {
 
     //Prints player count by country
     public void printPlayerByCountry(List<String> countryList) {
-        System.out.println("Country\t\tPlayers");
+        System.out.println("Country\t\t\tPlayers");
 
         for (String country : countryList) {
-            System.out.printf("%s\t\t", country);
+            System.out.printf("%s\t\t\t", country);
             int totalPlayerOfCountry = 0;
 
+            //iterates over PlayerDB for each country in countryList
             for (Player player : PlayerDB) {
                 if (player.getCountry().equalsIgnoreCase(country)) {
                     totalPlayerOfCountry++;
