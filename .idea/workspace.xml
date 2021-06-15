@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3af4da39-adbb-4003-91fa-2198647fbee1" name="Default Changelist" comment="" />
+    <list default="true" id="3af4da39-adbb-4003-91fa-2198647fbee1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/players.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClubSearchMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClubSearchMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerSearchMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerSearchMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,17 +55,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -81,6 +76,7 @@
       <workItem from="1623689014209" duration="1789000" />
       <workItem from="1623719901811" duration="9665000" />
       <workItem from="1623743944034" duration="4437000" />
+      <workItem from="1623752383002" duration="860000" />
     </task>
     <servers />
   </component>

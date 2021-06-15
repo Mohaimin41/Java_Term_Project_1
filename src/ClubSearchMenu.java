@@ -24,7 +24,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
             if (searchByName(clubToBeSearched)) {
                 double maxSalary = maxSalaryInCLub(clubToBeSearched);
 
-                System.out.println("The maximum weekly salary at the club " + clubToBeSearched + " is: ");
+                System.out.println("The maximum weekly salary at the club '" + clubToBeSearched + "' is: ");
                 System.out.printf("%.2f\n", maxSalary);
                 System.out.println("The player(s) with maximum salary:");
 
@@ -41,7 +41,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
             if (searchByName(clubToBeSearched)) {
                 int maxAge = maxAgeInCLub(clubToBeSearched);
 
-                System.out.println("The maximum age of players at the club " + clubToBeSearched + " is: ");
+                System.out.println("The maximum age of the players at the club '" + clubToBeSearched + "' is: ");
                 System.out.printf("%d\n", maxAge);
                 System.out.println("The player(s) with maximum age:");
 
@@ -58,7 +58,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
             if (searchByName(clubToBeSearched)) {
                 double maxHeight = maxHeightInCLub(clubToBeSearched);
 
-                System.out.println("The maximum height of players at the club " + clubToBeSearched + " is: ");
+                System.out.println("The maximum height of players at the club '" + clubToBeSearched + "' is: ");
                 System.out.printf("%.2f\n", maxHeight);
                 System.out.println("The player(s) with maximum height:");
 
@@ -75,7 +75,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
             if (searchByName(clubToBeSearched)) {
                 double totalSalary = totalYearlySalaryClub(clubToBeSearched);
 
-                System.out.println("The total yearly salary of players at the club " + clubToBeSearched + " is: ");
+                System.out.println("The total yearly salary of players at the club '" + clubToBeSearched + "' is: ");
                 System.out.printf("%.2f\n", totalSalary);
 
             } else {

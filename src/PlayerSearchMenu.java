@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.List;
 
-public class PlayerSearchMenu extends PlayerSearch {
+public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatter{
 
     public PlayerSearchMenu(List<Player> PlayerDB) {
         super(PlayerDB);
@@ -29,7 +29,7 @@ public class PlayerSearchMenu extends PlayerSearch {
                 returnSearchedPlayer(searchString).display();
             } else {
                 System.out.println("No such player with this name");
-                System.out.println("=========================================================================================");
+                horizontalLine();
             }
 
             return true;
@@ -49,7 +49,7 @@ public class PlayerSearchMenu extends PlayerSearch {
             return true;
 
         } else if (playerSearchOption == 3) {
-            System.out.println("Enter the position to be searched");
+            System.out.println("Enter the position to be searched:");
             String Position = input.nextLine();
             searchByPosition(Position);
 
@@ -60,7 +60,7 @@ public class PlayerSearchMenu extends PlayerSearch {
 
             System.out.println("Lower Bound:");
             double low = input.nextDouble();
-            System.out.println("Upper Bound");
+            System.out.println("Upper Bound:");
             double high = input.nextDouble();
 
             searchBySalaryRange(low, high);
@@ -76,6 +76,7 @@ public class PlayerSearchMenu extends PlayerSearch {
 
         } else {
             System.out.println("Please choose a correct option:");
+            horizontalLine();
             return true;
         }
     }

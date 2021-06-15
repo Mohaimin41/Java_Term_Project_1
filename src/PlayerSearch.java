@@ -75,6 +75,7 @@ public class PlayerSearch implements InputOutputFormatter {
 
     public void searchBySalaryRange(double low, double high) {
         int total = 0;
+        horizontalLine();
         for (Player player : PlayerDB) {
             if (player.getWeeklySalary() <= high && player.getWeeklySalary() >= low) {
                 total++;
@@ -119,10 +120,10 @@ public class PlayerSearch implements InputOutputFormatter {
 
     //Prints player count by country
     public void printPlayerByCountry(List<String> countryList) {
-        System.out.println("Country\t\t\tPlayers");
+        System.out.println("Country\t\t\t Players");
 
         for (String country : countryList) {
-            System.out.printf("%s\t\t\t", country);
+            System.out.printf("%s\t\t\t ", country);
             int totalPlayerOfCountry = 0;
 
             //iterates over PlayerDB for each country in countryList
