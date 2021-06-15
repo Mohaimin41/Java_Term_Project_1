@@ -75,9 +75,8 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
             return false;
 
         } else {
-            System.out.println("Please choose a correct option:");
-            horizontalLine();
-            return true;
+            chooseCorrectOption();
+	    return true;
         }
     }
 }

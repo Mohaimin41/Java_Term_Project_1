@@ -89,7 +89,6 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
 
         } else {
             chooseCorrectOption();
-            horizontalLine();
 
             return true;
         }
