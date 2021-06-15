@@ -2,7 +2,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu implements InputOutputFormatter {
-    public MainMenu() {
+    List<Player> PlayerDB;
+    FileIO PlayerFile;
+
+    public MainMenu(List<Player> PlayerDB, FileIO PlayerFile) {
+        this.PlayerDB = PlayerDB;
+        this.PlayerFile = PlayerFile;
     }
 
     public void MenuWrite() {
@@ -13,7 +18,7 @@ public class MainMenu implements InputOutputFormatter {
         System.out.println("(4) Exit System");
     }
 
-    public boolean MenuProcess(int MenuOption, List<Player> PlayerDB, FileIO PlayerFile) throws Exception {
+    public boolean MenuProcess(int MenuOption) throws Exception {
         Scanner input = new Scanner(System.in);
 
         if (MenuOption == 1) {

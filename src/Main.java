@@ -7,9 +7,10 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        MainMenu menu = new MainMenu();
+
         FileIO playerFile = new FileIO();
         List<Player> PlayerDB = playerFile.readFromFile();
+        MainMenu menu = new MainMenu(PlayerDB, playerFile);
 
         //Main menu
         while (true) {
@@ -19,7 +20,7 @@ public class Main {
             int MenuOption = input.nextInt();
 
             //Process the menu
-            if (!menu.MenuProcess(MenuOption, PlayerDB, playerFile)) {
+            if (!menu.MenuProcess(MenuOption)) {
                 break;
             }
         }
