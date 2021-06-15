@@ -107,7 +107,7 @@ public class PlayerSearch implements InputOutputFormatter {
 
     //returns a List of unique countries in PlayerDB
     public List<String> countryList(List<Player> PlayerDB) {
-        List<String> countries = new ArrayList();
+        List<String> countries = new ArrayList<>();
 
         for (Player player : PlayerDB) {
             if (!countries.contains(player.getCountry())) {

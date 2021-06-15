@@ -14,7 +14,7 @@ public class FileIO {
 
     public List<Player> readFromFile() throws Exception {
         //Player list to be used as database
-        List<Player> PlayerList = new ArrayList();
+        List<Player> PlayerList = new ArrayList<>();
 
         BufferedReader PlayersFileBuffer = new BufferedReader(new FileReader(FILE_NAME));
 
