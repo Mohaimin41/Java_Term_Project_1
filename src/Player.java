@@ -90,8 +90,8 @@ public class Player implements InputOutputFormatter{
         System.out.println("Player Name: " + Name);
         System.out.println("Country: " + Country);
         System.out.println("Club: " + Club);
-        System.out.println("Age: " + Age);
-        System.out.println("Height: " + Height);
+        System.out.println("Age: " + Age + " years");
+        System.out.println("Height: " + Height + " meter");
         System.out.println("Position: " + Position);
         System.out.println("Number: " + Number);
         System.out.println("Weekly Salary: " + WeeklySalary);

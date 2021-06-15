@@ -42,7 +42,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
                 int maxAge = maxAgeInCLub(clubToBeSearched);
 
                 System.out.println("The maximum age of the players at the club '" + clubToBeSearched + "' is: ");
-                System.out.printf("%d\n", maxAge);
+                System.out.printf("%d years\n", maxAge);
                 System.out.println("The player(s) with maximum age:");
 
                 printPlayerInClubByAge(maxAge, clubToBeSearched);
@@ -59,7 +59,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
                 double maxHeight = maxHeightInCLub(clubToBeSearched);
 
                 System.out.println("The maximum height of players at the club '" + clubToBeSearched + "' is: ");
-                System.out.printf("%.2f\n", maxHeight);
+                System.out.printf("%.2f meter\n", maxHeight);
                 System.out.println("The player(s) with maximum height:");
 
                 printPlayerInClubByHeight(maxHeight, clubToBeSearched);
