@@ -65,7 +65,7 @@ public class MainMenu implements InputOutputFormatter {
                     System.out.println("The player " + playerToBeAdded.getName() + " has been added");
 
                 } else {
-                    System.out.println("The club" + playerToBeAdded.getClub() + "already has 7 players, no more player can be added");
+                    System.out.println("The club " + playerToBeAdded.getClub() + " already has 7 players, no more player can be added");
 
                 }
             }
