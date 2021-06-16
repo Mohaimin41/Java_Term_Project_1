@@ -28,65 +28,50 @@ public class PlayerSearch implements InputOutputFormatter {
         return result;
     }
 
-    public void searchByCountry(String Country) {
-        int total = 0;
+    public List<Player> searchByCountry(String Country) {
+        List<Player> playerFromSearchedCountry = new ArrayList<>();
+
         for (Player player : PlayerDB) {
             if (player.getCountry().equalsIgnoreCase(Country)) {
-                total++;
-                System.out.println(total + ".");
-                player.display();
+                playerFromSearchedCountry.add(player);
             }
         }
-        if (total == 0) {
-            System.out.println("No player found with the given country and club");
-            horizontalLine();
-        }
+
+        return playerFromSearchedCountry;
     }
 
-    public void searchByClubCountry(String country, String club) {
-        int total = 0;
+    public List<Player> searchByClubCountry(String country, String club) {
+        List<Player> playerFromSearchedCountryClub = new ArrayList<>();
         for (Player player : PlayerDB) {
             if (player.getCountry().equalsIgnoreCase(country) && player.getClub().equalsIgnoreCase(club)) {
-                total++;
-                System.out.println(total + ".");
-                player.display();
+                playerFromSearchedCountryClub.add(player);
             }
         }
-        if (total == 0) {
-            System.out.println("No player found with the given country and club");
-            horizontalLine();
-        }
+
+        return playerFromSearchedCountryClub;
     }
 
-    public void searchByPosition(String Position) {
-        int total = 0;
+    public List<Player> searchByPosition(String Position) {
+        List<Player> playerFromSearchedPosition = new ArrayList<>();
+
         for (Player player : PlayerDB) {
             if (player.getPosition().equalsIgnoreCase(Position)) {
-                total++;
-                System.out.println(total + ".");
-                player.display();
+                playerFromSearchedPosition.add(player);
             }
         }
-        if (total == 0) {
-            System.out.println("No player found with the given position");
-            horizontalLine();
-        }
+        return playerFromSearchedPosition;
     }
 
-    public void searchBySalaryRange(double low, double high) {
-        int total = 0;
-        horizontalLine();
+    public List<Player> searchBySalaryRange(double low, double high) {
+        List<Player> playerFromSearchedSalaryRange = new ArrayList<>();
+
         for (Player player : PlayerDB) {
             if (player.getWeeklySalary() <= high && player.getWeeklySalary() >= low) {
-                total++;
-                System.out.println(total + ".");
-                player.display();
+                playerFromSearchedSalaryRange.add(player);
             }
         }
-        if (total == 0) {
-            System.out.println("No player found with the given weekly salary range");
-            horizontalLine();
-        }
+
+        return playerFromSearchedSalaryRange;
     }
 
     public void countryStat() {

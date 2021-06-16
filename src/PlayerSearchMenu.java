@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.List;
 
-public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatter{
+public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatter {
 
     public PlayerSearchMenu(List<Player> PlayerDB) {
         super(PlayerDB);
@@ -41,9 +41,9 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
             String club = input.nextLine();
 
             if (club.equals("ANY")) {
-                searchByCountry(country);
+                printPlayerList(searchByCountry(country));
             } else {
-                searchByClubCountry(country, club);
+                printPlayerList(searchByClubCountry(country, club));
             }
 
             return true;
@@ -51,7 +51,7 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
         } else if (playerSearchOption == 3) {
             System.out.println("Enter the position to be searched:");
             String Position = input.nextLine();
-            searchByPosition(Position);
+            printPlayerList(searchByPosition(Position));
 
             return true;
 
@@ -63,7 +63,7 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
             System.out.println("Upper Bound:");
             double high = input.nextDouble();
 
-            searchBySalaryRange(low, high);
+            printPlayerList(searchBySalaryRange(low, high));
 
             return true;
 
@@ -76,7 +76,29 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
 
         } else {
             chooseCorrectOption();
-	    return true;
+            return true;
         }
+    }
+
+    //prints all players in a given list answer for a query
+    void printPlayerList(List<Player> searchedPlayerList) {
+
+        if (searchedPlayerList.size() == 0) {
+            printNoPlayerFound();
+        } else {
+            System.out.println("There are " + searchedPlayerList.size() + " player(s) conforming to the given query:");
+
+            int serial = 0;
+
+            for (Player player : searchedPlayerList) {
+                System.out.println(++serial + ".");
+                player.display();
+            }
+        }
+    }
+
+    void printNoPlayerFound() {
+        System.out.println("There were no player(s) found with the given query, please try again");
+        horizontalLine();
     }
 }

@@ -21,7 +21,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
         if (ClubSearchMenuOption == 1) {
             String clubToBeSearched = clubNamePrompt();
 
-            if (searchByName(clubToBeSearched)) {
+            if (searchClubByName(clubToBeSearched)) {
                 double maxSalary = maxSalaryInCLub(clubToBeSearched);
 
                 System.out.println("The maximum weekly salary at the club '" + clubToBeSearched + "' is: ");
@@ -38,7 +38,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
         } else if (ClubSearchMenuOption == 2) {
             String clubToBeSearched = clubNamePrompt();
 
-            if (searchByName(clubToBeSearched)) {
+            if (searchClubByName(clubToBeSearched)) {
                 int maxAge = maxAgeInCLub(clubToBeSearched);
 
                 System.out.println("The maximum age of the players at the club '" + clubToBeSearched + "' is: ");
@@ -55,7 +55,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
         } else if (ClubSearchMenuOption == 3) {
             String clubToBeSearched = clubNamePrompt();
 
-            if (searchByName(clubToBeSearched)) {
+            if (searchClubByName(clubToBeSearched)) {
                 double maxHeight = maxHeightInCLub(clubToBeSearched);
 
                 System.out.println("The maximum height of players at the club '" + clubToBeSearched + "' is: ");
@@ -72,7 +72,7 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
         } else if (ClubSearchMenuOption == 4) {
             String clubToBeSearched = clubNamePrompt();
 
-            if (searchByName(clubToBeSearched)) {
+            if (searchClubByName(clubToBeSearched)) {
                 double totalSalary = totalYearlySalaryClub(clubToBeSearched);
 
                 System.out.println("The total yearly salary of players at the club '" + clubToBeSearched + "' is: ");

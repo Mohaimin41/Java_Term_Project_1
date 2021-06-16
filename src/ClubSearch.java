@@ -8,7 +8,7 @@ public class ClubSearch {
         this.PlayerDB = PlayerDB;
     }
 
-    public boolean searchByName(String club) {
+    public boolean searchClubByName(String club) {
         for (Player player : PlayerDB) {
             if (player.getClub().equalsIgnoreCase(club)) {
                 return true;

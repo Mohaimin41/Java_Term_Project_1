@@ -1,4 +1,4 @@
-public class Player implements InputOutputFormatter{
+public class Player implements InputOutputFormatter {
     String Name;
     String Country;
     int Age;
