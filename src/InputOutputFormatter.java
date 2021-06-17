@@ -1,4 +1,4 @@
-interface InputOutputFormatter {
+public interface InputOutputFormatter {
     default void horizontalLine() {
         System.out.println("=========================================================================================");
     }
