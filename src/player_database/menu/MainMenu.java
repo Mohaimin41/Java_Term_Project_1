@@ -1,5 +1,9 @@
+package player_database.menu;
+
 import java.util.List;
 import java.util.Scanner;
+
+import player_database.database.*;
 
 public class MainMenu implements InputOutputFormatter {
     List<Player> PlayerDB;

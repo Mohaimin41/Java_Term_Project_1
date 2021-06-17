@@ -1,5 +1,10 @@
-import java.util.List;
+package player_database.search;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import player_database.database.*;
+import player_database.menu.InputOutputFormatter;
 
 public class PlayerSearch implements InputOutputFormatter {
     List<Player> PlayerDB;

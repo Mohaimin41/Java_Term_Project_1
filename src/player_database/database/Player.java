@@ -1,3 +1,7 @@
+package player_database.database;
+
+import player_database.menu.InputOutputFormatter;
+
 public class Player implements InputOutputFormatter {
     String Name;
     String Country;

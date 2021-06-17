@@ -1,5 +1,9 @@
+package player_database.search;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import player_database.database.*;
 
 public class ClubSearch {
     List<Player> PlayerDB;

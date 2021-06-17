@@ -1,5 +1,7 @@
-import java.util.Scanner;
+package player_database.database;
+
 import java.util.List;
+import java.util.Scanner;
 
 public class AddPlayer {
     List<Player> PlayerDB;

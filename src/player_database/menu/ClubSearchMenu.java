@@ -1,5 +1,11 @@
+package player_database.menu;
+
 import java.util.Scanner;
 import java.util.List;
+
+import player_database.database.Player;
+//import player_database.database.PlayerDatabase;
+import player_database.search.ClubSearch;
 
 public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
 
@@ -98,10 +104,5 @@ public class ClubSearchMenu extends ClubSearch implements InputOutputFormatter {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the name of the club for its players to be searched:");
         return input.nextLine();
-    }
-
-    public void noSuchClubPrompt() {
-        System.out.println("No such club with this name");
-        horizontalLine();
     }
 }

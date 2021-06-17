@@ -1,5 +1,11 @@
+package player_database.menu;
+
 import java.util.Scanner;
 import java.util.List;
+
+//import player_database.database.PlayerDatabase;
+import player_database.search.PlayerSearch;
+import player_database.database.Player;
 
 public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatter {
 
@@ -78,27 +84,5 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
             chooseCorrectOption();
             return true;
         }
-    }
-
-    //prints all players in a given list answer for a query
-    void printPlayerList(List<Player> searchedPlayerList) {
-
-        if (searchedPlayerList.size() == 0) {
-            printNoPlayerFound();
-        } else {
-            System.out.println("There are " + searchedPlayerList.size() + " player(s) conforming to the given query:");
-
-            int serial = 0;
-
-            for (Player player : searchedPlayerList) {
-                System.out.println(++serial + ".");
-                player.display();
-            }
-        }
-    }
-
-    void printNoPlayerFound() {
-        System.out.println("There were no player(s) found with the given query, please try again");
-        horizontalLine();
     }
 }
