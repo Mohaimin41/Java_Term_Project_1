@@ -65,9 +65,9 @@ public class PlayerSearchMenu extends PlayerSearch implements InputOutputFormatt
             System.out.println("Enter the weekly salary range to be searched:");
 
             System.out.println("Lower Bound:");
-            double low = input.nextDouble();
+            double low = getDoubleFromUser();
             System.out.println("Upper Bound:");
-            double high = input.nextDouble();
+            double high = getDoubleFromUser();
 
             printPlayerList(searchBySalaryRange(low, high));
 
