@@ -1,6 +1,7 @@
 package player_database.menu;
 
 import java.util.List;
+import java.util.Scanner;
 
 import player_database.database.Player;
 
@@ -40,4 +41,51 @@ public interface InputOutputFormatter {
         System.out.println("No such club with this name");
         horizontalLine();
     }
+
+    default int getIntFromUser() {
+        Scanner input = new Scanner(System.in);
+
+        while (!input.hasNextInt()) {
+            System.out.println("Please enter a number:");
+            input.next();
+        }
+
+        return input.nextInt();
+    }
+
+    default double getDoubleFromUser() {
+        Scanner input = new Scanner(System.in);
+
+        while (!input.hasNextDouble()) {
+            System.out.println("Please enter a number:");
+            input.next();
+        }
+
+        return input.nextDouble();
+    }
+
+    default String getValidPlayerPosition() {
+        Scanner input = new Scanner(System.in);
+
+        while (true) {
+            String givenPosition = input.nextLine();
+            if (!isValidPosition(givenPosition)) {
+                System.out.println("Please enter a valid player position:");
+            } else {
+                return givenPosition;
+            }
+        }
+    }
+
+    private boolean isValidPosition(String givenPosition) {
+        String [] positions = {"goalkeeper", "defender", "midfielder", "forward"};
+
+        for (String position : positions) {
+            if (givenPosition.toLowerCase().equalsIgnoreCase(position)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

@@ -3,7 +3,9 @@ package player_database.database;
 import java.util.List;
 import java.util.Scanner;
 
-public class AddPlayer {
+import player_database.menu.InputOutputFormatter;
+
+public class AddPlayer implements InputOutputFormatter{
     List<Player> PlayerDB;
 
     public AddPlayer(List<Player> PlayerDB) {
@@ -43,30 +45,29 @@ public class AddPlayer {
         Scanner input = new Scanner(System.in);
         Player playerToBeAdded = new Player();
 
-        System.out.println("Player name:");
+        System.out.println("Player Name:");
         playerToBeAdded.setName(input.nextLine());
 
-        System.out.println("Country:");
+        System.out.println("Player Country:");
         playerToBeAdded.setCountry(input.nextLine());
 
-        System.out.println("Age:");
-        playerToBeAdded.setAge(input.nextInt());
-
-        System.out.println("Height:");
-        playerToBeAdded.setHeight(input.nextDouble());
-
-        System.out.println("Club:");
-        input.nextLine();
+        System.out.println("Player Club:");
         playerToBeAdded.setClub(input.nextLine());
 
-        System.out.println("Position:");
-        playerToBeAdded.setPosition(input.nextLine());
+        System.out.println("Player Position: (Goalkeeper, Defender, Midfielder, Forward)");
+        playerToBeAdded.setPosition(getValidPlayerPosition());
 
-        System.out.println("Number:");
-        playerToBeAdded.setNumber(input.nextInt());
+        System.out.println("Player Age:");
+        playerToBeAdded.setAge(getIntFromUser());
 
-        System.out.println("Weekly Salary:");
-        playerToBeAdded.setWeeklySalary(input.nextDouble());
+        System.out.println("Player Height:");
+        playerToBeAdded.setHeight(getDoubleFromUser());
+
+        System.out.println("Player Number:");
+        playerToBeAdded.setNumber(getIntFromUser());
+
+        System.out.println("Player's Weekly Salary:");
+        playerToBeAdded.setWeeklySalary(getDoubleFromUser());
 
         return playerToBeAdded;
     }
