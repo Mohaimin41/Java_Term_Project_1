@@ -69,10 +69,10 @@ public interface InputOutputFormatter {
 
         while (true) {
             String givenPosition = input.nextLine();
-            if (!isValidPosition(givenPosition)) {
+            if (!isValidPosition(givenPosition.trim())) {
                 System.out.println("Please enter a valid player position:");
             } else {
-                return givenPosition;
+                return givenPosition.trim();
             }
         }
     }

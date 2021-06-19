@@ -15,7 +15,7 @@ public class PlayerSearch implements InputOutputFormatter {
 
     public boolean searchByName(String Name) {
         for (Player player : PlayerDB) {
-            if (player.getName().equalsIgnoreCase(Name)) {
+            if (player.getName().equalsIgnoreCase(Name.trim())) {
                 return true;
             }
         }
@@ -25,7 +25,7 @@ public class PlayerSearch implements InputOutputFormatter {
     public Player returnSearchedPlayer(String Name) {
         Player result = null;
         for (Player player : PlayerDB) {
-            if (player.getName().equalsIgnoreCase(Name)) {
+            if (player.getName().equalsIgnoreCase(Name.trim())) {
                 result = player;
                 break;
             }
@@ -37,7 +37,7 @@ public class PlayerSearch implements InputOutputFormatter {
         List<Player> playerFromSearchedCountry = new ArrayList<>();
 
         for (Player player : PlayerDB) {
-            if (player.getCountry().equalsIgnoreCase(Country)) {
+            if (player.getCountry().equalsIgnoreCase(Country.trim())) {
                 playerFromSearchedCountry.add(player);
             }
         }
@@ -48,7 +48,7 @@ public class PlayerSearch implements InputOutputFormatter {
     public List<Player> searchByClubCountry(String country, String club) {
         List<Player> playerFromSearchedCountryClub = new ArrayList<>();
         for (Player player : PlayerDB) {
-            if (player.getCountry().equalsIgnoreCase(country) && player.getClub().equalsIgnoreCase(club)) {
+            if (player.getCountry().equalsIgnoreCase(country.trim()) && player.getClub().equalsIgnoreCase(club.trim())) {
                 playerFromSearchedCountryClub.add(player);
             }
         }
@@ -60,7 +60,7 @@ public class PlayerSearch implements InputOutputFormatter {
         List<Player> playerFromSearchedPosition = new ArrayList<>();
 
         for (Player player : PlayerDB) {
-            if (player.getPosition().equalsIgnoreCase(Position)) {
+            if (player.getPosition().equalsIgnoreCase(Position.trim())) {
                 playerFromSearchedPosition.add(player);
             }
         }
@@ -95,13 +95,13 @@ public class PlayerSearch implements InputOutputFormatter {
         horizontalLine();
     }
 
-    //returns a List of unique countries in PlayerDB
+    //returns a List of unique countries in PlayerDB, ignores spaces at front or back of country name
     public List<String> countryList(List<Player> PlayerDB) {
         List<String> countries = new ArrayList<>();
 
         for (Player player : PlayerDB) {
-            if (!countries.contains(player.getCountry())) {
-                countries.add(player.getCountry());
+            if (!countries.contains(player.getCountry().trim())) {
+                countries.add(player.getCountry().trim());
             }
         }
 
@@ -118,7 +118,7 @@ public class PlayerSearch implements InputOutputFormatter {
 
             //iterates over PlayerDB for each country in countryList
             for (Player player : PlayerDB) {
-                if (player.getCountry().equalsIgnoreCase(country)) {
+                if (player.getCountry().trim().equalsIgnoreCase(country.trim())) {
                     totalPlayerOfCountry++;
                 }
             }

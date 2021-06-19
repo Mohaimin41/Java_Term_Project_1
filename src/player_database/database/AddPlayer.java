@@ -46,13 +46,13 @@ public class AddPlayer implements InputOutputFormatter{
         Player playerToBeAdded = new Player();
 
         System.out.println("Player Name:");
-        playerToBeAdded.setName(input.nextLine());
+        playerToBeAdded.setName(input.nextLine().trim());
 
         System.out.println("Player Country:");
-        playerToBeAdded.setCountry(input.nextLine());
+        playerToBeAdded.setCountry(input.nextLine().trim());
 
         System.out.println("Player Club:");
-        playerToBeAdded.setClub(input.nextLine());
+        playerToBeAdded.setClub(input.nextLine().trim());
 
         System.out.println("Player Position: (Goalkeeper, Defender, Midfielder, Forward)");
         playerToBeAdded.setPosition(getValidPlayerPosition());

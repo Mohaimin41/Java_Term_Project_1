@@ -14,7 +14,7 @@ public class ClubSearch {
 
     public boolean searchClubByName(String club) {
         for (Player player : PlayerDB) {
-            if (player.getClub().equalsIgnoreCase(club)) {
+            if (player.getClub().equalsIgnoreCase(club.trim())) {
                 return true;
             }
         }
@@ -26,7 +26,7 @@ public class ClubSearch {
         List<Player> CLubPlayerList = new ArrayList<>();
 
         for (Player player : PlayerDB) {
-            if (player.getClub().equalsIgnoreCase(club)) {
+            if (player.getClub().equalsIgnoreCase(club.trim())) {
                 CLubPlayerList.add(player);
             }
         }
