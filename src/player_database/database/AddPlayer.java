@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import player_database.menu.InputOutputFormatter;
 
-public class AddPlayer implements InputOutputFormatter{
+public class AddPlayer implements InputOutputFormatter {
     List<Player> PlayerDB;
 
     public AddPlayer(List<Player> PlayerDB) {
@@ -35,6 +35,17 @@ public class AddPlayer implements InputOutputFormatter{
 
     public boolean hasClubSpace(Player playerToBeAdded) {
         return clubTotalPlayer(playerToBeAdded.getClub()) < 7;
+    }
+
+    public boolean isNumberPresentInClub(Player playerToBeAdded) {
+        for (Player player : PlayerDB) {
+            if ((playerToBeAdded.getClub().trim().equalsIgnoreCase(player.getClub().trim()))
+                    && (playerToBeAdded.getNumber() == player.getNumber())) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void addPlayer(Player playerToBeAdded) {

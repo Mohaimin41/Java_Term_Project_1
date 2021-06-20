@@ -78,7 +78,7 @@ public interface InputOutputFormatter {
     }
 
     private boolean isValidPosition(String givenPosition) {
-        String [] positions = {"goalkeeper", "defender", "midfielder", "forward"};
+        String[] positions = {"goalkeeper", "defender", "midfielder", "forward"};
 
         for (String position : positions) {
             if (givenPosition.toLowerCase().equalsIgnoreCase(position)) {

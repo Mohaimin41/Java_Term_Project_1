@@ -64,9 +64,14 @@ public class MainMenu implements InputOutputFormatter {
             } else {
                 if (addPlayer.hasClubSpace(playerToBeAdded)) {
 
-                    addPlayer.addPlayer(playerToBeAdded);
+                    if (addPlayer.isNumberPresentInClub(playerToBeAdded)) {
+                        System.out.println("There is already a player in this club with number " + playerToBeAdded.getNumber()
+                                + ". Please try again.");
+                    } else {
+                        addPlayer.addPlayer(playerToBeAdded);
 
-                    System.out.println("The player " + playerToBeAdded.getName() + " has been added");
+                        System.out.println("The player " + playerToBeAdded.getName() + " has been added to the database.");
+                    }
 
                 } else {
                     System.out.println("The club " + playerToBeAdded.getClub() + " already has 7 players, no more players can be added");
@@ -89,4 +94,3 @@ public class MainMenu implements InputOutputFormatter {
         }
     }
 }
-
