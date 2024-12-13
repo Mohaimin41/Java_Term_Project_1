@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" styleClass="mainPage" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.sellPlayerPageController">
+   <children>
+      <Label fx:id="playerTableHeader" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="58.0" styleClass="commonFontForTitles" text="Select Players To Be Put In The Marketplace" textFill="#f4f4f4" />
+      <TableView fx:id="playerToBeSoldTable" layoutX="22.0" layoutY="127.0" prefHeight="358.0" prefWidth="1063.0" styleClass="playerTable">
+         <columns>
+            <TableColumn fx:id="Name" editable="false" prefWidth="248.79997634887695" text="Name" />
+            <TableColumn fx:id="Age" editable="false" prefWidth="51.20001220703125" text="Age" />
+            <TableColumn fx:id="Country" editable="false" minWidth="0.0" prefWidth="161.79998779296875" text="Country" />
+            <TableColumn fx:id="Club" editable="false" minWidth="0.0" prefWidth="171.20001220703125" text="Club" />
+            <TableColumn fx:id="Position" editable="false" minWidth="0.0" prefWidth="103.0" text="Position" />
+            <TableColumn fx:id="Number" editable="false" prefWidth="95.39996337890625" text="Number" />
+            <TableColumn fx:id="Height" editable="false" prefWidth="78.5999755859375" text="Height" />
+            <TableColumn fx:id="WeeklySalary" editable="false" prefWidth="149.60003662109375" text="Weekly Salary" />
+         </columns>
+      </TableView>
+      <Button fx:id="putInMarketPlaceButton" layoutX="86.0" layoutY="523.0" mnemonicParsing="false" onAction="#handlePutInMarketPlaceButton" styleClass="commonButton" text="Put In Marketplace" />
+      <Button fx:id="resetButton" layoutX="339.0" layoutY="524.0" mnemonicParsing="false" onAction="#handleResetButton" styleClass="commonButton" text="Reset Selection" />
+      <Button fx:id="backToMarketButton" layoutX="752.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleBackToMarketButton" styleClass="commonButton" text="Back To Marketplace Menu" />
+      <Button fx:id="refreshButton" layoutX="572.0" layoutY="524.0" mnemonicParsing="false" onAction="#handleRefreshButton" styleClass="commonButton" text="Refresh" />
+   </children>
+</AnchorPane>

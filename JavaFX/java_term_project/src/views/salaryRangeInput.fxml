@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="351.0" prefWidth="600.0" styleClass="mainPage" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="controllers.salaryRangeInputController">
+    <children>
+        <Label layoutX="93.0" layoutY="44.0" styleClass="commonFontForTitles" text="Input Minimum And Maximum Salary" textFill="WHITE" />
+        <TextField fx:id="minSalary" layoutX="229.0" layoutY="108.0" prefHeight="36.0" prefWidth="321.0" promptText="Enter minimum salary of players" styleClass="commonFontForLightText" />
+        <Button fx:id="searchBySalaryRangeButton" layoutX="139.0" layoutY="247.0" mnemonicParsing="false" onAction="#searchBySalaryRange" styleClass="commonButton" text="Submit" />
+        <Button fx:id="resetFieldButton" layoutX="260.0" layoutY="247.0" mnemonicParsing="false" onAction="#resetFields" styleClass="commonButton" text="Reset" />
+        <Button fx:id="BackToPlayerSearchButton" layoutX="364.0" layoutY="247.0" mnemonicParsing="false" onAction="#backToPlayerSearch" styleClass="commonButton" text="Cancel" />
+        <TextField fx:id="maxSalary" layoutX="229.0" layoutY="176.0" prefHeight="36.0" prefWidth="321.0" promptText="Enter maximum salary of players" styleClass="commonFontForLightText" />
+        <Label layoutX="57.0" layoutY="111.0" styleClass="commonFontForTexts" text="Minimum Salary:" textFill="WHITE" />
+        <Label layoutX="57.0" layoutY="179.0" styleClass="commonFontForTexts" text="Maximum Salary:" textFill="WHITE" />
+    </children>
+</AnchorPane>

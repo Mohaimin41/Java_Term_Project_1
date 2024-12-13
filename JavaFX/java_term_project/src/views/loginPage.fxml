@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane prefHeight="355.0" prefWidth="600.0" styleClass="otherPage" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="controllers.loginPageController">
+   <children>
+      <Label alignment="BASELINE_CENTER" layoutX="163.0" layoutY="61.0" styleClass="commonFontForTitles" text="Football Manager - Login" />
+      <Label layoutX="115.0" layoutY="154.0" styleClass="commonFontForTexts" text="Club Name:" />
+      <Label layoutX="115.0" layoutY="200.0" styleClass="commonFontForTexts" text="Password  :" />
+      <TextField fx:id="clubName" layoutX="237.0" layoutY="148.0" styleClass="commonFontForLightText" />
+      <PasswordField fx:id="clubPassword" layoutX="237.0" layoutY="194.0" styleClass="commonFontForLightText" />
+      <Button fx:id="loginButton" layoutX="176.0" layoutY="276.0" mnemonicParsing="false" onAction="#loginButtonHandler" styleClass="commonButton" text="Login" />
+      <Button fx:id="resetButton" layoutX="270.0" layoutY="276.0" mnemonicParsing="false" onAction="#resetButtonHandler" styleClass="commonButton" text="Reset" />
+      <Button fx:id="exitButton" layoutX="365.0" layoutY="276.0" mnemonicParsing="false" onAction="#exitButtonHandler" styleClass="commonButton" text="Exit" />
+   </children>
+</AnchorPane>

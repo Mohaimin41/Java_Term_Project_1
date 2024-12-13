@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/" prefHeight="506.0" prefWidth="554.0" styleClass="otherPage"
+            stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/"
+            fx:controller="controllers.countryWisePlayerCountController">
+    <children>
+        <Label layoutX="134.0" layoutY="28.0" styleClass="commonFontForTitles" text="Country-wise Player Count"
+               textFill="#eaec52"/>
+        <TableView fx:id="playerCountTable" layoutX="99.0" layoutY="106.0" prefHeight="314.0" prefWidth="356.0"
+                   styleClass="commonFontForTexts">
+            <columns>
+                <TableColumn id="playerCountTableCountriesColumn" fx:id="playerCountTableCountriesColumn"
+                             editable="false" prefWidth="240.79999542236328" text="Countries"/>
+                <TableColumn id="playerCountTablePlayersColumn" fx:id="playerCountTablePlayersColumn" editable="false"
+                             prefWidth="114.4000244140625" text="Players"/>
+            </columns>
+        </TableView>
+        <Button fx:id="backToPlayerSearchButton" layoutX="59.0" layoutY="441.0" mnemonicParsing="false"
+                onAction="#handleBackToPlayerSearchButton" styleClass="commonButton" text="Back To Player Search"/>
+        <Button fx:id="backToMainButton" layoutX="314.0" layoutY="441.0" mnemonicParsing="false"
+                onAction="#handleBackToMainButton" styleClass="commonButton" text="Back To Main Menu"/>
+    </children>
+</AnchorPane>

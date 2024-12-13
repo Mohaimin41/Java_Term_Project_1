@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="238.0" prefWidth="600.0" styleClass="mainPage" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="controllers.playerNameInputController">
+    <children>
+        <Label layoutX="196.0" layoutY="44.0" styleClass="commonFontForTitles" text="Input Player Name:" textFill="WHITE" />
+        <TextField fx:id="playerToBeSearched" layoutX="139.0" layoutY="101.0" prefHeight="36.0" prefWidth="321.0" promptText="Enter player name" styleClass="commonFontForLightText" />
+        <Button fx:id="searchByNameButton" layoutX="139.0" layoutY="160.0" mnemonicParsing="false" onAction="#searchByPlayerName" styleClass="commonButton" text="Submit" />
+        <Button fx:id="resetFieldButton" layoutX="263.0" layoutY="160.0" mnemonicParsing="false" onAction="#resetFields" styleClass="commonButton" text="Reset" />
+        <Button fx:id="BackToPlayerSearchButton" layoutX="371.0" layoutY="160.0" mnemonicParsing="false" onAction="#backToPlayerSearch" styleClass="commonButton" text="Cancel" />
+    </children>
+</AnchorPane>

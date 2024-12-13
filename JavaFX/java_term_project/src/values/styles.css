@@ -1,0 +1,55 @@
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.mainPage {
+    -fx-background-color: #101008;
+}
+
+.mainMenuVbox {
+    -fx-background-radius: 20;
+}
+
+.commonFontForTitles {
+    -fx-font-family: Calibri;
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: #FFFFFF;
+}
+
+.commonFontForButtons {
+    -fx-font-family: Calibri;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.commonButton {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+    -fx-font-family: Calibri;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.commonFontForTexts {
+    -fx-font-family: Calibri;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F7F449;
+}
+
+.playerTable {
+    -fx-font-family: Calibri;
+    -fx-font-size: 20;
+}
+
+.commonFontForLightText {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18;
+}
+
+.otherPage {
+    -fx-background-color: #101008;
+}
+

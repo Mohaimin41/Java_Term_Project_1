@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" styleClass="mainPage" stylesheets="@../values/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.playerTableController">
+    <children>
+        <Label fx:id="playerTableHeader" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="53.0" styleClass="commonFontForTitles" text="Players Matching The Query" textFill="#f4f4f4" />
+        <TableView fx:id="playerTable" layoutX="22.0" layoutY="127.0" prefHeight="358.0" prefWidth="1063.0" styleClass="playerTable">
+            <columns>
+                <TableColumn fx:id="Name" editable="false" prefWidth="248.79997634887695" text="Name" />
+                <TableColumn fx:id="Age" editable="false" prefWidth="51.20001220703125" text="Age" />
+                <TableColumn fx:id="Country" editable="false" minWidth="0.0" prefWidth="161.79998779296875" text="Country" />
+                <TableColumn fx:id="Club" editable="false" minWidth="0.0" prefWidth="171.20001220703125" text="Club" />
+                <TableColumn fx:id="Position" editable="false" minWidth="0.0" prefWidth="103.0" text="Position" />
+                <TableColumn fx:id="Number" editable="false" prefWidth="95.39996337890625" text="Number" />
+                <TableColumn fx:id="Height" editable="false" prefWidth="78.5999755859375" text="Height" />
+                <TableColumn fx:id="WeeklySalary" editable="false" prefWidth="149.60003662109375" text="Weekly Salary" />
+            </columns>
+        </TableView>
+        <Button fx:id="backToPlayerSearchButton" layoutX="245.0" layoutY="523.0" mnemonicParsing="false" onAction="#backToPlayerSearch" styleClass="commonButton" text="Back To Player Search" />
+        <Button fx:id="backToClubSearchButton" layoutX="550.0" layoutY="523.0" mnemonicParsing="false" onAction="#backToClubSearch" styleClass="commonButton" text="Back to Club Search" />
+        <Button fx:id="backToMainButton" layoutX="834.0" layoutY="523.0" mnemonicParsing="false" onAction="#backToMain" styleClass="commonButton" text="Back To Main Menu" />
+      <Button fx:id="refreshButton" layoutX="87.0" layoutY="524.0" mnemonicParsing="false" onAction="#handleRefreshButton" styleClass="commonButton" text="Refresh" />
+    </children>
+</AnchorPane>
